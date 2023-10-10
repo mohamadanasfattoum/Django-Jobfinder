@@ -1,6 +1,5 @@
-jobs:
+job:
 - Company
-- Job Category
 - image 
 - logo 
 - Salary
