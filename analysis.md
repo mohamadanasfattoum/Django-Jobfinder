@@ -1,5 +1,5 @@
 job:
-- Company
+- Name
 - image 
 - logo 
 - Salary
@@ -9,13 +9,28 @@ job:
     remote
     freelance
             ]
-- Name
 - Company
 - Location 
-- adresse
-- Description
-- Required Knowledge
 - Education 
+- Experience
+
+
+
+Company :
+- Name
+- logo 
+- image 
+- Salary
+- Location 
+- Description
+- Education
 - Experience
 - Web
 - Email
+
+
+Categories :
+- name
+- job
+- rate
+- logo
