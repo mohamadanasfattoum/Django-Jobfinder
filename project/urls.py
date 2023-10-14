@@ -19,7 +19,7 @@ from django.urls import path,include
 from django.conf import settings
 from django.conf.urls.static import static
 from jobs.views import Job_list
-from jobs.api import JobListApi
+from jobs.api import JobListApi, JobDetailApi
 
 
 urlpatterns = [
@@ -27,6 +27,7 @@ urlpatterns = [
     path('summernote/', include('django_summernote.urls')),
     path('jobs/', Job_list.as_view()),
     path('jobs/api/list/', JobListApi.as_view()),
+    path('jobs/api/list/<int:pk>', JobDetailApi.as_view()),    
 ]
 
 
