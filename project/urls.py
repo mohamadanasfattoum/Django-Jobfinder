@@ -19,12 +19,14 @@ from django.urls import path,include
 from django.conf import settings
 from django.conf.urls.static import static
 from jobs.views import Job_list
+from jobs.api import JobListApi
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('summernote/', include('django_summernote.urls')),
     path('jobs/', Job_list.as_view()),
+    path('jobs/api/list/', JobListApi.as_view()),
 ]
 
 
