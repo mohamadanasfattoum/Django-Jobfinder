@@ -5,7 +5,7 @@ from .serializers import JobListSerializer, JobDetailSerializer
 from .models import Job
 
 
-class JobListApi(generics.ListAPIView):
+class JobListApi(generics.ListCreateAPIView):
     serializer_class = JobListSerializer
     queryset = Job.objects.all()
 
