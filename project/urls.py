@@ -25,7 +25,9 @@ from jobs.api import JobListApi, JobDetailApi
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('summernote/', include('django_summernote.urls')),
+
     path('jobs/', Job_list.as_view()),
+    
     path('jobs/api/list/', JobListApi.as_view()),
     path('jobs/api/list/<int:pk>', JobDetailApi.as_view()),    
 ]

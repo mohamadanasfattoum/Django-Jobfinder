@@ -1,9 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 
-
-{% block body %}
-    <main>
+{% block slider %}
             <div class="slider-area ">
                 <div class="single-slider section-overly slider-height2 d-flex align-items-center" data-background="assets/img/hero/about.jpg">
                     <div class="container">
@@ -17,7 +15,13 @@
                     </div>
                 </div>
             </div>
-            <!-- Hero Area End -->
+{% endblock slider %}
+
+
+
+{% block body %}
+
+
 
             <!-- Job List Area Start -->
             <div class="job-listing-area pt-120 pb-120">
@@ -391,7 +395,5 @@
                 </div>
             </div>
             <!--Pagination End  -->
-
-    </main>
 
 {% endblock body %}
