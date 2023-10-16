@@ -18,7 +18,8 @@ EXPERIENCE_CHOICES =(
 
 class Job(models.Model):
     name = models.CharField(_('Name'), max_length=120)
-    image = models.ImageField(_('Image'), upload_to='job')
+    logo = models.ImageField(_('Logo'), upload_to='logo' , null=True, blank=True)
+    email = models.TextField(_('Email'), max_length=500, null=True, blank=True)
     job_description = models.TextField(_('Job_description'), max_length=5000, null=True, blank=True)
     rounding_salary= models.CharField(_('Rounding_salary'),max_length=50, null=True, blank=True)
     education =models.CharField(_('Education'), max_length=500, null=True, blank=True )
