@@ -4,10 +4,9 @@ services:
   db:
     image: postgres:13
     environment:
-      POSTGRES_USER: 'anas'
-      POSTGRES_PASSWORD: '123456'
-      POSTGRES_DB: 'db'
-
+      POSTGRES_DB: mydatabase
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: mypassword
   djangoserver:
     build: .
     command: python manage.py runserver 0.0.0.0:8000 # um lockal docker mit lockal im gerät zuverbinden
@@ -16,7 +15,5 @@ services:
     container_name: Backend
     volumes:
       - .:/app
-
     depends_on:
       - db
-

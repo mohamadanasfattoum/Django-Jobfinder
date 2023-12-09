@@ -21,7 +21,3 @@ RUN pip install -r /app/requirements.txt
 # copy all project files
 COPY . /app/
 
-EXPOSE 8000
-
-# Run the Django development server
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
